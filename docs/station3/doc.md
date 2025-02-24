@@ -2,7 +2,9 @@
 
 ## 1. 技術選定
 
-### フロントエンド
+### 基本技術
+
+#### フロントエンド
 
 <div style="display: flex; gap: 10px;">
 <img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=for-the-badge">
@@ -12,7 +14,7 @@
 <img src="https://img.shields.io/badge/-Tailwind-007ACC.svg?logo=Tailwind%20CSS&style=for-the-badge">
 </div>
 
-### バックエンド
+#### バックエンド
 
 <div style="display: flex; gap: 10px;">
 <img src="https://img.shields.io/badge/-Django-092E20.svg?logo=django&style=for-the-badge">
@@ -21,25 +23,37 @@
 <img src="https://img.shields.io/badge/-Redis-D82C20.svg?logo=redis&style=for-the-badge">
 </div>
 
-### データベース
+#### データベース
 
 <div style="display: flex; gap: 10px;">
 <img src="https://img.shields.io/badge/-Postgresql-336791.svg?logo=postgresql&style=for-the-badge">
 <img src="https://img.shields.io/badge/-Redis-D82C20.svg?logo=redis&style=for-the-badge"><!-- 調べる -->
 </div>
 
-### インフラ
+#### インフラ
 
 <div style="display: flex; gap: 10px;">
 <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=for-the-badge">
 <img src="https://img.shields.io/badge/-Github-181717.svg?logo=github&style=for-the-badge">
 </div>
 
+### 詳細(機能ごと)
+
+- 非同期処理 | Celery + Redis
+  (Celery は「非同期処理」をするための Python ライブラリ。Redis は「データを一時的に保存する」超高速なデータストア。)
+- スクレイピング | Scrapy
+- SNS ノイズ除去 | Django(キーワードフィルタ) + Celery(自動処理) + scikit-learn(技術情報のスコアリング) + TensorFlow(センチメント分析)
+- 通知システム | SendGrid
+
 ## 2. アーキテクチャ選定
 
 ## 3. 画面設計図
 
+https://www.figma.com/design/jebUmbbmmWhomnBWcHVQhJ/portfolio?node-id=0-1&t=R9gUt9kXrhTz3m3R-1
+
 ## 4. 画面遷移図
+
+フリーボード共有
 
 ## 5. ユーザーフロー図
 
