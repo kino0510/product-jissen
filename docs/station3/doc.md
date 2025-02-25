@@ -35,6 +35,7 @@
 <div style="display: flex; gap: 10px;">
 <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=for-the-badge">
 <img src="https://img.shields.io/badge/-Github-181717.svg?logo=github&style=for-the-badge">
+<img src="https://img.shields.io/badge/-Render-181717.svg?logo=Render&style=for-the-badge">
 </div>
 
 ### 詳細(機能ごと)
