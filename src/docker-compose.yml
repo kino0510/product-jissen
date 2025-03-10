@@ -1,0 +1,39 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/code
+    depends_on:
+      - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings
+      - DATABASE_URL=${DATABASE_URL}
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Hot-reloading対応
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
