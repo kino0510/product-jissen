@@ -1,5 +1,5 @@
 # Node.js lts image
-FROM node:lts
+FROM node:22.9.0
 
 # ワーキングディレクトリを指定
 WORKDIR /usr/src/app

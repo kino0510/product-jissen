@@ -19,8 +19,8 @@ services:
       dockerfile: frontend.dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/usr/src/app
+    # volumes:
+    #   - ./frontend:/usr/src/app
     environment:
       - CHOKIDAR_USEPOLLING=true  # Hot-reloading対応
 
