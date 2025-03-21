@@ -22,6 +22,8 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/others/loading"],
   "exclude": ["node_modules"]
 }
+
+//TODO:attention "src/app/others/loading"
