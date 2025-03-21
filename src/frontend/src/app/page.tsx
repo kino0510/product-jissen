@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import Link from "next/link";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 
 export default function Home() {
@@ -17,21 +17,23 @@ export default function Home() {
 
       <div className="mt-16 flex space-x-6">
         <Link href="/auth/signup">
-          <button
+          <Button
             // variant="outline"
             className="bg-gray-200 text-black hover:bg-gray-300 hover:text-black rounded-full px-8 py-2 text-lg font-medium">
             Create Account
-          </button>
+          </Button>
         </Link>
         <Link href="/auth/login">
-          <button
+          <Button
             // variant="outline"
             className="bg-gray-200 text-black hover:bg-gray-300 hover:text-black rounded-full px-8 py-2 text-lg font-medium"
           >
             Login
-          </button>
+          </Button>
         </Link>
       </div>
     </main>
   );
+
+  
 }
