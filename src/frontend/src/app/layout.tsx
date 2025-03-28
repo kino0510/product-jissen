@@ -5,6 +5,11 @@ import "./globals.css";
 import Footer from "../../components/layouts/Footer";
 import Heeder from "../../components/layouts/Header";
 
+import { getAuthSession } from "@/lib/nextauth";//auth
+import AuthProvider from "@/components/providers/AuthProvider";//auth
+import ToastProvider from "@/components/providers/ToastProvider";//auth
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,19 +25,26 @@ export const metadata: Metadata = {
   description: "Technology info curation",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  // 認証情報取得
+  const user = await getAuthSession();//auth
+
   return (
     <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Heeder />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Heeder user={user} />
+          <ToastProvider />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
